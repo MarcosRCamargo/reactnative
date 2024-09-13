@@ -1,43 +1,15 @@
-import { Image, StyleSheet, Platform,View } from 'react-native';
-
-// import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-// import { ThemedText } from '@/components/ThemedText';
-// import { ThemedView } from '@/components/ThemedView';
-import Login from '@/components/login/Login';
+import React from 'react';
+import { StatusBar } from 'expo-status-bar';
+import { Text } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function HomeScreen() {
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#DFE3E4FF' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-        <Login></Login>
-
-    </ParallaxScrollView>
-    
+    <SafeAreaView >
+      <Text className='text-red-500'>Uber Clone</Text>
+      <StatusBar  />
+    </SafeAreaView>    
   );
 }
 
-const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-  },
-});
+
